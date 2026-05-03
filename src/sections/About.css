@@ -1,0 +1,205 @@
+.about {
+  background: var(--color-bg-primary);
+}
+
+.about__content {
+  display: grid;
+  gap: var(--space-3xl);
+  align-items: start;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.about__content--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+  .about__content {
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--space-4xl);
+  }
+}
+
+/* Image */
+.about__image-col {
+  display: flex;
+  justify-content: center;
+}
+
+.about__image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 3 / 4;
+}
+
+.about__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  position: relative;
+  z-index: 2;
+}
+
+.about__image-frame {
+  position: absolute;
+  inset: -8px;
+  border: 1px solid var(--color-border-accent);
+  border-radius: calc(var(--radius-lg) + 4px);
+  z-index: 1;
+}
+
+.about__image-accent {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  width: 60%;
+  height: 60%;
+  background: linear-gradient(135deg, var(--color-accent-muted), transparent);
+  border-radius: var(--radius-lg);
+  z-index: 0;
+}
+
+/* Info */
+.about__name-block {
+  margin-bottom: var(--space-xl);
+}
+
+.about__name {
+  font-family: var(--font-heading);
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-text-primary);
+  line-height: var(--lh-tight);
+}
+
+.about__title {
+  display: block;
+  font-size: var(--fs-sm);
+  color: var(--color-accent);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  margin-top: var(--space-xs);
+  font-weight: var(--fw-medium);
+}
+
+.about__quote {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  font-style: italic;
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+  padding-left: var(--space-lg);
+  border-left: 3px solid var(--color-accent);
+  margin-bottom: var(--space-xl);
+}
+
+.about__bio {
+  margin-bottom: var(--space-xl);
+}
+
+.about__bio p {
+  font-size: var(--fs-base);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-md);
+}
+
+.about__bio p:last-child {
+  margin-bottom: 0;
+}
+
+.about__section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-accent);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+}
+
+.about__style {
+  margin-bottom: var(--space-xl);
+  padding: var(--space-lg);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.about__style p {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+/* Gear */
+.about__gear {
+  margin-bottom: var(--space-xl);
+}
+
+.about__gear-list {
+  display: grid;
+  gap: var(--space-md);
+}
+
+@media (min-width: 480px) {
+  .about__gear-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.about__gear-group {
+  padding: var(--space-md);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.about__gear-category {
+  display: block;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-muted);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+
+.about__gear-item {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  padding: 3px 0;
+  line-height: var(--lh-snug);
+}
+
+/* Social */
+.about__social {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.about__social-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 8px 16px;
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.about__social-link:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  background: var(--color-accent-muted);
+}

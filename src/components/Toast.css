@@ -1,0 +1,99 @@
+.toast-container {
+  position: fixed;
+  top: calc(var(--nav-height) + var(--space-md));
+  right: var(--space-md);
+  z-index: var(--z-toast);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  pointer-events: none;
+  max-width: 420px;
+  width: calc(100% - var(--space-xl));
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(16px);
+  animation: toastSlideIn 0.3s ease forwards;
+  pointer-events: auto;
+}
+
+.toast--exit {
+  animation: toastSlideOut 0.3s ease forwards;
+}
+
+.toast--success {
+  border-left: 3px solid var(--color-success);
+}
+
+.toast--error {
+  border-left: 3px solid var(--color-error);
+}
+
+.toast--info {
+  border-left: 3px solid var(--color-info);
+}
+
+.toast--warning {
+  border-left: 3px solid var(--color-warning);
+}
+
+.toast__icon {
+  font-size: var(--fs-md);
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+}
+
+.toast--success .toast__icon {
+  color: var(--color-success);
+  background: rgba(74, 222, 128, 0.1);
+}
+
+.toast--error .toast__icon {
+  color: var(--color-error);
+  background: rgba(248, 113, 113, 0.1);
+}
+
+.toast--info .toast__icon {
+  color: var(--color-info);
+  background: rgba(96, 165, 250, 0.1);
+}
+
+.toast--warning .toast__icon {
+  color: var(--color-warning);
+  background: rgba(251, 191, 36, 0.1);
+}
+
+.toast__message {
+  flex: 1;
+  font-size: var(--fs-sm);
+  color: var(--color-text-primary);
+  line-height: var(--lh-snug);
+}
+
+.toast__close {
+  font-size: var(--fs-lg);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.toast__close:hover {
+  color: var(--color-text-primary);
+  background: var(--color-bg-glass-light);
+}
