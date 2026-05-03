@@ -56,7 +56,7 @@ In early 2026, DK Kamlesh founded SPW (Street Photowalk) — a monthly community
 When not leading photowalks, DK Kamlesh can be found editing late into the night, experimenting with film photography, or planning the next walk route over chai.`,
   philosophy: '"Every street has a story. Every frame is a conversation. I don\'t take photos — I collect moments that refuse to be forgotten."',
   style: 'Specializes in candid street photography, golden hour landscapes, and architectural details. Drawn to high contrast, warm tones, and the interplay of light and shadow. Believes in minimal post-processing — getting it right in-camera is the goal.',
-  profileImage: '/dkskamlesh-spw-2026/dk-kamlesh-profile.jpg',
+  profileImage: '/spw/dk-kamlesh-profile.jpg',
 };
 
 export const STATS = [

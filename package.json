@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://dkskamlesh.github.io/dkskamlesh-spw-2026",
+  "homepage": "https://codercake.github.io/spw",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
